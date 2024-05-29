@@ -1,0 +1,51 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 58px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.title {
+    width: 187px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.title > h3 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(37, 43, 66, 1);
+}
+
+.nav-links {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links > ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signup {
+    color: rgba(35, 166, 240, 1);
+}
+
