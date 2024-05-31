@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
+    position: relative;
 }
 
 .title {
@@ -47,5 +48,49 @@
 
 .signup {
     color: rgba(35, 166, 240, 1);
+}
+
+.toggle-menu {
+    display: none;
+    position: relative;
+    margin: auto;
+}
+
+.toggle_items {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    width: 370px;
+    height: 350px;
+    top: 70%;
+    left: 0;
+    background-color: white;
+}
+
+.toggle_items > li {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 30px;
+    color: rgba(115, 115, 115, 1);
+}
+
+@media screen and (max-width: 414px) {
+    .nav-links {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .toggle_items.is-open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
