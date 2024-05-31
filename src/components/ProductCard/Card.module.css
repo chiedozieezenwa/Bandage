@@ -1,0 +1,76 @@
+.container {
+    width: 183px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.details {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container > .details > h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin: 0px;
+    color: rgba(37, 43, 66, 1);
+}
+
+.container > .details > p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 0px;
+    color: rgba(115, 115, 115, 1);
+}
+
+.price {
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+    padding: 5px 3px;
+}
+
+.price > h5 {
+    color: rgba(189, 189, 189, 1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin: 0px;
+}
+
+.price > h5::before {
+    content: "$";
+    color: rgba(189, 189, 189, 1);
+}
+
+.price2 {
+    color: rgba(35, 133, 109, 1);
+    margin-left: 5px;
+}
+
+.price2::before {
+    content: "$";
+    color: rgba(35, 133, 109, 1);
+}

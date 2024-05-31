@@ -15,7 +15,22 @@
 
 .card1, .card2, .card3, .card4 {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     font-family: 'Montserrat';
+}
+
+.card1 > h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(37, 43, 66, 1);
+    line-height: 50px;
+}
+
+.card2 > h3, .card3 > h3, .card4 > h3 {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .readmore, .item {
