@@ -1,0 +1,85 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 632px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 1050px;
+    height: 616px;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    width: 692px;
+    height: 102px;
+    display: grid;
+    text-align: center;
+}
+
+.title > p {
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.featured-products {
+    font-size: 20px;
+}
+
+.best-services {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(37, 43, 66, 1);
+}
+
+.featured-products, .problems {
+    font-weight: 600;
+    color: rgba(115, 115, 115, 1);
+}
+
+.problems {
+    font-size: 14px;
+}
+
+.main {
+    width: 1045px;
+    height: 274px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 328px;
+    height: 100%;
+    gap: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        width: 414px;
+        height: 1114px;
+    }
+
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        width: 300px;
+        height: 122px;
+    }
+
+    .main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 50px;
+    }
+}
