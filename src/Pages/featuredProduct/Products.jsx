@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useGetProductsQuery } from '../../redux/ProductsApi';
+import { useGetProductsQuery } from '../../redux/Api';
 import Cards from '../../components/ProductCard/Card';
 import design from './Products.module.css'
 
