@@ -71,3 +71,10 @@ p {
     background: transparent;
     margin-top: 32px;
 }
+
+@media screen and (max-width: 414px) {
+    .featured_products {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
