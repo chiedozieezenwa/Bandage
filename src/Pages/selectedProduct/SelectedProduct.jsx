@@ -10,6 +10,12 @@ import basket from '../../assets/basket.svg';
 import more from '../../assets/more.svg';
 import BestsellerProduct from '../../components/BestSeller/BestsellerProducts';
 import Footer from '../../components/Footer/Footer'
+import holi from '../../assets/bestservices/holi1.png'
+import lyft from '../../assets/bestservices/lyft2.png'
+import leaf from '../../assets/bestservices/leaf3.png'
+import stripe from '../../assets/bestservices/stripe4.png'
+import aws from '../../assets/bestservices/aws5.png'
+import last from '../../assets/bestservices/last6.png'
 
 const SelectedProduct = () => {
     // eslint-disable-next-line no-unused-vars
@@ -87,8 +93,21 @@ const SelectedProduct = () => {
                 <img src={product.thumbnail} alt={product.title} />
               </div>
             </div>
+            
+            <div className={design['best-seller']}>
             <BestsellerProduct />
-  <Footer />
+            </div>          
+            <div className={design['image-array']}>
+              <section>
+                <img src={holi} alt="#" />
+                <img src={lyft} alt="#" />
+                <img src={leaf} alt="#" />
+                <img src={stripe} alt="#" />
+                <img src={aws} alt="#" />
+                <img src={last} alt="#" />
+              </section>
+            </div>
+            <Footer />
         </div>
     )
 }
