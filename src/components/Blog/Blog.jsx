@@ -14,7 +14,7 @@ export const Blog = () => {
             <div key={blog.id} className={design.card}>
                 <img src={blog.imgURL} alt="Card" />
                 <div className={design['card-details']}>
-                    <ul>
+                    <ul className={design['card-list']}>
                         <li>{blog.li1}</li>
                         <li>{blog.li2}</li>
                         <li>{blog.li3}</li>

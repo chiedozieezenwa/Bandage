@@ -4,13 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .content {
     width: 1050px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 80px;
 }
 
 .main {

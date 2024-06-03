@@ -33,9 +33,9 @@ const Products = () => {
   return (
     <div className={design.container}>
       <div className={design.section_title}>
-        <h2>Featured Products</h2>
-        <h3>BESTSELLER PRODUCTS</h3>
-        <p>Problems trying to resolve the conflict between</p>
+        <h2 className={design['feat-product']}>Featured Products</h2>
+        <h3 className={design['bestseller-product']}>BESTSELLER PRODUCTS</h3>
+        <p className={design['problems']}>Problems trying to resolve the conflict between</p>
       </div>
 
       <div className={design.featured_products}>

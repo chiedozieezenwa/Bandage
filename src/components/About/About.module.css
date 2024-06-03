@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 48px 0 48px;
+    padding: 30px 48px 30px 48px;
 }
 
 .left-section {
@@ -42,6 +42,7 @@
 
 .slate {
     color: rgba(115, 115, 115, 1);
+    text-align: center;
 }
 
 .testifier {
@@ -70,6 +71,7 @@
         justify-content: center;
         gap: 10px;
         padding: 0;
+        margin: 0;
     }
 
     .left-section, .right-section {

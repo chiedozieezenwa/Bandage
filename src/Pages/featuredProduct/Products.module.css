@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .featured_products {
@@ -23,12 +24,12 @@
     align-items: center;
 }
 
-h2, h3, p {
+.feat-product, .bestseller-product, .problems {
     margin: 0px;
     width: fit-content;
 }
 
-h2 {
+.feat-product {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -37,7 +38,7 @@ h2 {
     color: rgba(115, 115, 115, 1);
 }
 
-h3 {
+.bestseller-product {
     color: rgba(37, 43, 66, 1);
     font-size: 24px;
     font-weight: 700;
@@ -46,7 +47,7 @@ h3 {
     text-align: center;
 }
 
-p {
+.problems {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
