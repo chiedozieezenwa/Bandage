@@ -9,6 +9,7 @@ import like from '../../assets/like.svg';
 import basket from '../../assets/basket.svg';
 import more from '../../assets/more.svg';
 import BestsellerProduct from '../../components/BestSeller/BestsellerProducts';
+import Footer from '../../components/Footer/Footer'
 
 const SelectedProduct = () => {
     // eslint-disable-next-line no-unused-vars
@@ -44,6 +45,7 @@ const SelectedProduct = () => {
                 <div className={design.thumbnail}>
                   <img src={product.thumbnail} alt={product.title} />
                 </div>
+                
                 <div className={design.other_images}>
                   <img src={product.images[0]} alt={product.title} />
                 </div>
@@ -86,6 +88,7 @@ const SelectedProduct = () => {
               </div>
             </div>
             <BestsellerProduct />
+  <Footer />
         </div>
     )
 }
