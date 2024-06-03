@@ -1,0 +1,45 @@
+.navigation {
+    display: flex;
+    padding: 24px;
+    gap: 15px;
+    background-color: #fafafa;
+}
+
+.navigation img {
+    width: 9px;
+    height: 16px;
+}
+
+.home_text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #252B42;
+    text-decoration: none;
+    margin: 0;
+}
+
+.shop_text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #252B42;
+    text-decoration: none;
+    margin: 0;
+}
+
+.cart_text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #bdbdbd;
+    margin: 0;
+}
+
+.cart__container {
+    display: flex;
+    gap: 56px;
+}

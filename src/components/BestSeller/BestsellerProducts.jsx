@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useGetProductsQuery } from '../../redux/Api';
 import Cards from '../../components/ProductCard/Card';
-import design from './Products.module.css'
+import design from './Bestseller.module.css'
 import { Link } from 'react-router-dom';
 
-const Products = () => {
+const BestSellerProducts = () => {
   const { data, error, isLoading } = useGetProductsQuery();
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount] = useState(8);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -15,10 +15,6 @@ const Products = () => {
   if (error) {
     return <div>Error fetching data</div>;
   }
-
-  const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 5);
-  };
 
   const displayedItems = data.products.slice(0, visibleCount).map((item) => (
     <Link key={item.id} to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -36,22 +32,13 @@ const Products = () => {
   return (
     <div className={design.container}>
       <div className={design.section_title}>
-        <h2 className={design['feat-product']}>Featured Products</h2>
         <h3 className={design['bestseller-product']}>BESTSELLER PRODUCTS</h3>
-        <p className={design['problems']}>Problems trying to resolve the conflict between</p>
       </div>
-
       <div className={design.featured_products}>
         {displayedItems}
       </div>
-
-      {visibleCount < data.products.length && (
-        <button onClick={handleLoadMore} className={design.load_button}>
-          Load more products
-        </button>
-      )}
     </div>
   );
 };
 
-export default Products;
+export default BestSellerProducts;

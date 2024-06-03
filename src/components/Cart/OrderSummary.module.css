@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 32px;
+}
+
+.order_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkout_button {
+    padding: 16px 20px;
+    border-radius: 5px;
+    background: rgba(35, 166, 240, 1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+}
+
+.line_break {
+    border: 1px solid rgba(220, 220, 220, 1);
+    color: rgba(220, 220, 220, 1);
+}
+
+.checkout_logos {
+    display: flex;
+    gap: 16px;
+}
+
+.checkout_logos img {
+    height: 12px;
+    width: auto;
+}
