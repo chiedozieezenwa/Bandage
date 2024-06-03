@@ -71,6 +71,11 @@
     background: transparent;
 }
 
+.load_button:hover {
+    background: rgba(35, 166, 240, 1);
+    color: white;
+}
+
 @media screen and (max-width: 414px) {
     .featured_products {
         display: grid;

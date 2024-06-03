@@ -8,7 +8,8 @@ import { useState } from 'react'
 import classNames from 'classnames'
 import searchicon from '../../assets/searchicon.svg'
 import shopcart from '../../assets/shopcart.svg'
-import toggle from '../../assets/toggle.svg'
+import toggle from '../../assets/toggle.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -25,8 +26,12 @@ const Navbar = () => {
             </section>
             <section className={design['nav-links']}>
                 <ul className={design['nav-list-item']}>
-                    <li>Home</li>
-                    <li>Shop <img src={dropdown} alt="Add to Cart" /></li>
+                    <Link to='/'>
+                        <li>Home</li>
+                    </Link>
+                    <Link to='/cart'>
+                        <li>Shop <img src={dropdown} alt="Add to Cart" /></li>
+                    </Link>
                     <li>About</li>
                     <li>Blog</li>
                     <li>Contact</li>
@@ -35,8 +40,10 @@ const Navbar = () => {
                 <ul className={classNames(design.signup, design.list_items)}>
                     <li><img src={person} alt="person" /> Login / Register</li>
                     <li><img src={search} alt="search" /></li>
-                    <li><img src={cart} alt="View Cart" /> 1</li>
-                    <li><img src={heart} alt="Reaction" /> 1</li>
+                    <Link to='/cart'>
+                        <li><img src={cart} alt="View Cart" /></li>
+                    </Link>
+                    <li><img src={heart} alt="Reaction" /></li>
                 </ul>
             </section>
             <section className={design['toggle-menu']}>
