@@ -24,7 +24,7 @@ const Navbar = () => {
                 <h3>Bandage</h3>
             </section>
             <section className={design['nav-links']}>
-                <ul>
+                <ul className={design['nav-list-item']}>
                     <li>Home</li>
                     <li>Shop <img src={dropdown} alt="Add to Cart" /></li>
                     <li>About</li>

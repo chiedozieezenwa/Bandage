@@ -11,8 +11,8 @@ const Topnav = () => {
         <header className={design.container}>
             <div className={design.content}>
                 <section className={design.left_section}>
-                    <p className={design.contact}><img src={telephone} alt="Call us on" /> (225) 555-0118</p>
-                    <p className={design.contact}><img src={email} alt="Mail us on" /> michelle.rivera@example.com</p>
+                    <p className={design.contact}><img src={telephone} alt="Call us on" /> (+234) 8060492441</p>
+                    <p className={design.contact}><img src={email} alt="Mail us on" /> chiedozieezenwa@gmail.com</p>
                 </section>
                 <section className={design.middle_section}>
                     <p>Follow Us  and get a chance to win 80% off</p>

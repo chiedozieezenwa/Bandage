@@ -26,16 +26,19 @@
     font-weight: 700;
     color: rgba(37, 43, 66, 1);
     line-height: 50px;
+    margin: 0;
 }
 
 .card2 > h3, .card3 > h3, .card4 > h3 {
     font-size: 24px;
     font-weight: 700;
+    margin: 0;
 }
 
 .readmore, .item {
     font-size: 14px;
     font-weight: 700;
+    margin: 0;
 }
 
 .item {

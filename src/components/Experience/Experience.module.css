@@ -1,0 +1,90 @@
+.container {
+    background-image: url('../../assets/experience.png');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 1050px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 607px;
+    height: 368px;
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-caption {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(35, 166, 240, 1);
+    margin: 0;
+}
+
+.boldtxt {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(37, 43, 66, 1);
+    text-align: center;
+    line-height: 50px;
+}
+
+.classictxt {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(115, 115, 115, 1);
+    line-height: 20px;
+}
+
+.price {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(35, 133, 109, 1);
+    text-align: center;
+}
+
+.addtocart-btn {
+    margin: 0;
+    width: 200px;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgba(35, 166, 240, 1);
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        width: 414px;
+        height: 617px;
+    }
+
+    .content {
+        justify-content: center;
+    }
+
+    .main {
+        width: 358px;
+        height: 488px;
+        justify-content: center;
+    }
+
+    .addtocart-btn {
+        width: 150px;
+        height: 50px;
+    }
+}
