@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import design from './ShoppingCart.module.css';
-import { useGetProductsQuery } from '../../redux/Api';
 import { useSelector } from 'react-redux';
 import add from '../../assets/add.svg'
 import minus from '../../assets/minus.svg'
 import BestSellerProducts from '../BestSeller/BestsellerProducts';
 
 const ShoppingCart = () => {
-    const { data } = useGetProductsQuery();
     const cartItems = useSelector(state => state.cart.items);
 
-    const initialQuantities = data.products.slice(0, 3).reduce((acc, item) => {
+    const initialQuantities = cartItems.reduce((acc, item) => {
         acc[item.id] = 1;
         return acc;
       }, {});
