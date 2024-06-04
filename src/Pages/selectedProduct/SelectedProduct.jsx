@@ -2,6 +2,8 @@ import { useGetProductsQuery } from '../../redux/Api';
 import Navbar from "../../components/Navbar/Navbar"
 import Topnav from "../../components/Topnav/Topnav"
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/Cart';
 import design from './SelectedProduct.module.css';
 import rightIcon from '../../assets/right-icon.svg'
 import classNames from 'classnames';
@@ -21,6 +23,7 @@ import last from '../../assets/bestservices/last6.png'
 const SelectedProduct = () => {
     // eslint-disable-next-line no-unused-vars
     const { id } = useParams();
+    const dispatch = useDispatch();
 
     const { data, error, isLoading } = useGetProductsQuery();
 
@@ -37,6 +40,10 @@ const SelectedProduct = () => {
     if (!product) {
       return <div>Product not found</div>;
     }
+
+    const handleAddToCart = () => {
+      dispatch(addToCart(product));
+    };
 
     return (
         <div>
@@ -73,7 +80,7 @@ const SelectedProduct = () => {
                   <div className={design.optionBox}>
                     <img src={like} className={design.like}></img>
                   </div>
-                  <div className={design.optionBox}>
+                  <div className={design.optionBox} onClick={handleAddToCart}>
                     <Link to='/cart'>
                       <img src={basket} className={design.basket}></img>
                     </Link>
