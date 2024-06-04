@@ -3,6 +3,7 @@ import design from './ShoppingCart.module.css';
 import { useGetProductsQuery } from '../../redux/Api';
 import add from '../../assets/add.svg'
 import minus from '../../assets/minus.svg'
+import BestSellerProducts from '../BestSeller/BestsellerProducts';
 
 const ShoppingCart = () => {
     const { data } = useGetProductsQuery();
@@ -62,7 +63,8 @@ const ShoppingCart = () => {
     ));
 
     return (
-        <div className={design.container}>
+        <div>
+            <div className={design.container}>
             <h4 className={design.heading}>Shopping Cart</h4>
             <table className={design.table}>
                     <tr className={design.table_head}>
@@ -72,6 +74,8 @@ const ShoppingCart = () => {
                     </tr>
                     {products}
             </table>
+            </div>
+            <BestSellerProducts />
         </div>
     )
 }
