@@ -1,17 +1,61 @@
+import { useState } from 'react';
 import design from './ShoppingCart.module.css';
 import { useGetProductsQuery } from '../../redux/Api';
+import add from '../../assets/add.svg'
+import minus from '../../assets/minus.svg'
 
 const ShoppingCart = () => {
     const { data } = useGetProductsQuery();
 
+    const initialQuantities = data.products.slice(0, 3).reduce((acc, item) => {
+        acc[item.id] = 1;
+        return acc;
+      }, {});
+    
+      const [quantities, setQuantities] = useState(initialQuantities);
+
+      const handleIncrement = (id) => {
+        setQuantities((prevQuantities) => ({
+          ...prevQuantities,
+          [id]: prevQuantities[id] + 1,
+        }));
+      };
+    
+      const handleDecrement = (id) => {
+        setQuantities((prevQuantities) => ({
+          ...prevQuantities,
+          [id]: Math.max(1, prevQuantities[id] - 1), // Ensure quantity doesn't go below 1
+        }));
+      };
+
     const products = data.products.slice(0, 3).map((item) => (
         <tr key={item.id} className={design.product}>
             <td className={design.product_detail}>
-                <img src={item.thumbnail} alt={item.title} />
-                <div className={design.product_details}>
-                    <h2 className={design.product_detail_title}>{item.title}</h2>
-                    <h4 className={design.product_detail_stock}>{item.availabilityStatus}</h4>
-                    <p className={design.product_detail_rating}>{item.rating}</p>
+                <div className={design.product_detaill}>
+                    <img src={item.thumbnail} alt={item.title} />
+                    <div className={design.product_details}>
+                        <h2 className={design.product_detail_title}>{item.title}</h2>
+                        <h4 className={design.product_detail_stock}>{item.availabilityStatus}</h4>
+                        <p className={design.product_detail_rating}>{item.reviews.length} reviews</p>
+                    </div>
+                </div>
+                <div className={design.remove_button}>Remove</div>
+            </td>
+            <td className={design.product_quantity}>
+                <div className={design.product_quantity_div}>
+                <div className={design.minusButton} onClick={() => handleDecrement(item.id)}>
+                    <img src={minus} alt="minus button" />
+                </div>
+                <input className={design.quantity} type="text" value={quantities[item.id]} readOnly />
+                <div className={design.addButton} onClick={() => handleIncrement(item.id)}>
+                    <img src={add} alt="add button" />
+                </div>
+                </div>
+            </td>
+            <td className={design.product_price}>
+                <div className={design.product_price_div}>
+                    <h4 className={design.product_mainprice}>{item.price * quantities[item.id]}</h4>
+                    <h2 className={design.product_pricecalc}>{item.price} * {quantities[item.id]} items</h2>
                 </div>
             </td>
         </tr>
@@ -26,9 +70,7 @@ const ShoppingCart = () => {
                         <th className={design.table_heading}>Quantity</th>
                         <th className={design.table_heading} style={{borderTopRightRadius: "4px"}}>Price</th>
                     </tr>
-                <tbody>
                     {products}
-                </tbody>
             </table>
         </div>
     )

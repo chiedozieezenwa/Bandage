@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import like from '../../assets/like.svg';
 import basket from '../../assets/basket.svg';
 import more from '../../assets/more.svg';
+import { Link } from 'react-router-dom';
 import BestsellerProduct from '../../components/BestSeller/BestsellerProducts';
 import Footer from '../../components/Footer/Footer'
 import holi from '../../assets/bestservices/holi1.png'
@@ -73,7 +74,9 @@ const SelectedProduct = () => {
                     <img src={like} className={design.like}></img>
                   </div>
                   <div className={design.optionBox}>
-                    <img src={basket} className={design.basket}></img>
+                    <Link to='/cart'>
+                      <img src={basket} className={design.basket}></img>
+                    </Link>
                   </div>
                   <div className={design.optionBox}>
                     <img src={more} className={design.more}></img>
