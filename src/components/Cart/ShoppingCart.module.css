@@ -50,6 +50,13 @@
 
 .product_detail {
     display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.product_detaill {
+    display: flex;
     gap: 16px;
     align-items: center;
 }
@@ -98,3 +105,99 @@
     margin: 0px;
 }
 
+.remove_button {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    letter-spacing: 0.004em;
+    text-align: left;
+    color: #23A6F0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.remove_button::before {
+    content: url("../../assets/delete.svg");
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.product_quantity_div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.addButton,.minusButton {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+}
+
+.addButton > img, .minusButton > img {
+    width: 12px;
+    height: 12px;
+}
+
+.addButton {
+    background: #23A6F0;
+}
+
+.minusButton {
+    background: #E8EAEC;
+}
+
+.quantity {
+    border: 0.5px solid #3A3C3E;
+    border-radius: 4px;
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    letter-spacing: 0.002em;
+    text-align: center;
+    color: #121517;
+    width: 64px;
+}
+
+.product_price_div {
+    display: flex;
+    flex-direction: column;
+    gap: 4.62px;
+}
+
+.product_mainprice {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.002em;
+    text-align: left;
+    color: #121517;
+    margin: 0px;
+}
+
+.product_mainprice::before {
+    content: "₦";
+}
+
+.product_pricecalc {
+    font-size: 10.25px;
+    font-weight: 400;
+    letter-spacing: 0.002em;
+    text-align: left;
+    color: #6c6c6c;
+    margin: 0px;
+}
+
+.product_pricecalc::before {
+    content: "$";
+}
+
+.product_detail, .product_quantity, .product_price {
+    display: table-cell;
+}
